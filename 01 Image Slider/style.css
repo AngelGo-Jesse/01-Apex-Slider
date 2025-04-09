@@ -11,51 +11,58 @@ body{
 }
 
 .nav-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 15px 0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 30px;
-    height: 60px;
-    background: rgba(2, 8, 37, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .nav-logo {
-    font-family: "ICA Rubrik";
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .nav-links a {
-    font-family: "Poppins", sans-serif;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: rgba(255, 255, 255, 0.7);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 60px;
+  background: rgba(2, 8, 37, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease; /* Add transition for smooth glow effect */
+}
+
+/* Add hover effect to the navbar */
+.navbar:hover {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.2);
+}
+
+.nav-logo {
+  font-family: "ICA Rubrik";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
   
   @media (max-width: 768px) {
     .navbar {
@@ -80,7 +87,7 @@ body{
     position: absolute;
     width: 200px;
     height: 250px;
-    top: 20%;
+    top: 15%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -94,7 +101,7 @@ body{
     inset: 0 0 0 0;
     transform:
         rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ( 450px);
+        translateZ( 430px);
 }
 
 .item img{
@@ -108,10 +115,10 @@ body{
 
 @keyframes autoRun {
     from {
-      transform:perspective(1000px)rotateX(-16deg) rotateY(0deg);
+      transform:perspective(1000px)rotateX(-11deg) rotateY(0deg);
     }
     to {
-      transform:perspective(1000px)rotateX(-16deg) rotateY(360deg);
+      transform:perspective(1000px)rotateX(-11deg) rotateY(360deg);
     }
   }
 
@@ -133,7 +140,7 @@ body{
 .content h1{
     font-family: 'ICA Rubrik';
     font-size: 16em;
-    line-height: 1em;
+    line-height: 0em;
     color: whitesmoke;
     position: relative;
 
@@ -163,6 +170,7 @@ body{
     background-size: auto 150%;
     background-repeat: no-repeat;
     background-position: top center;
+    z-index: 0;
     
 }
 
